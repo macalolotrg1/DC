@@ -30,6 +30,7 @@ export default function DigitalClock() {
         <h1 className={style.clockTitle}>
           Digital Clock
         </h1>
+        <h1>Hello</h1>
         <div className={style.clockTime}>
           <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
         </div>
