@@ -28,9 +28,8 @@ export default function DigitalClock() {
     <div className={style.clockContainer}>
       <div className={style.clockBox}>
         <h1 className={style.clockTitle}>
-          Digital Clock
+          TBI X C&C
         </h1>
-        <h1>Hello</h1>
         <div className={style.clockTime}>
           <span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
         </div>
