@@ -1,0 +1,119 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: linear-gradient(to bottom right, #fbcfe8, #f9a8d4, #a78bfa);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: 'Inter', sans-serif;
+}
+
+.clockContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.clockBox {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+  border: 1px solid #f9a8d4;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  transform: scale(1);
+}
+
+.clockBox:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .clockBox {
+    padding: 3rem;
+  }
+}
+
+.clockTitle {
+  font-size: 2.25rem;         
+  font-weight: 800;            
+  color: #db2777;          
+  margin-bottom: 1rem;        
+  text-align: center;      
+  user-select: none;          
+  letter-spacing: 0.05em;     
+}
+
+@media (min-width: 768px) {
+  .clockTitle {
+    font-size: 3.75rem;     
+  }
+}
+@media (min-width: 1024px) {
+  .clockTitle {
+    font-size: 4.5rem;         
+  }
+}
+
+.clockTime {
+  font-size: 3.75rem;           
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace; 
+  font-weight: 700;            
+  color: #9d174d;         
+  text-align: center;         
+  user-select: none;           
+  animation: pulse-slow 2s infinite;
+}
+
+@media (min-width: 768px) {
+  .clockTime {
+    font-size: 6rem;          
+  }
+}
+@media (min-width: 1024px) {
+  .clockTime {
+    font-size: 8rem;         
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.clockDate {
+  font-size: 1.125rem;       
+  color: #ec4899;          
+  margin-top: 1.5rem;       
+  text-align: center;      
+  user-select: none;    
+}
+
+@media (min-width: 768px) {
+  .clockDate {
+    font-size: 1.25rem;  
+  }
+}
